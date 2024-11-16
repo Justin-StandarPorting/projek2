@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-image: url(bak.jpg);
+  font-size: 14px;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+  ;
+}
+
+.page-wrapper { 
+  position: relative; 
+  z-index: 1; /* Pastikan wrapper memiliki z-index lebih rendah */
+
+}
+ .glass { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(100%); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 0;
+  height: 125vh;
+  width: 100%;
+} 
+
+.container {
+  position: relative;
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+  z-index: 3;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.container .box-left {
+  width: fit-content;
+  background-color: #516087;
+  z-index: 2;
+}
+.container .box-left .profile {
+  width: 100%;
+  height: 180px;
+  background-color: gray;
+}
+.container .box-left .profile img {
+  width: 100%;
+  height: 180px;
+}
+
+.container .box-left .content {
+  padding: 0 25px;
+}
+
+.container .resume-item {
+  padding: 25px 0;
+  border-bottom: 2px solid rgb(75, 69, 69);
+}
+
+.container .title {
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.container .box-left .bold {
+  color: white;
+}
+.container .box-left .regular {
+  color: white;
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.container .box-left ul li {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.container .box-left ul li:last-child {
+  margin-bottom: 0;
+}
+.container .box-left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background-color: aliceblue;
+  color: rgb(67, 67, 162);
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+ .container .box-left ul li .data {
+  color: aliceblue;
+ }
+
+ .container .box-left .resume-skill ul li {
+  display: flex;
+  margin-bottom: 10px;
+  color: rgb(244, 244, 238);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .box-left .resume-skill ul li .skill-name{
+  width: 25%;
+  text-align: center;
+}
+
+
+ .container .box-left .resume-skill ul li .skill-progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 5px;
+  background-color: brown;
+  position: relative;
+ }
+
+.container .box-left .resume-skill ul li .skill-progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: aliceblue;
+}
+
+.container .box-left .resume-skill ul li .skill-percent {
+  width: 15%;
+}
+
+.container .box-left .resume-social .semi-bold {
+  color: white;
+  margin-bottom: 3px;
+}
+
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* SISI KANAN */ 
+
+.container .box-right {
+  width: 520px;
+  background-color: white;
+  padding: 25px;
+  z-index: 2;
+  background-color: #5E6FA3 ;
+}
+
+.container .box-left .resume-item:last-child,
+.container .box-right .resume-item:last-child {
+  border-bottom: 0px;
+}
+
+.container .box-right .bold {
+  color: rgb(59, 59, 137);
+}
+
+.container .box-right ul li {
+  position: relative;
+}
+
+.container .box-right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.container .box-right ul li .info {
+  margin-bottom: 20px;
+}
+
+.container .box-right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.container .box-right ul li:last-child .info {
+  margin-bottom: 0;
+}
+
+.container .box-right .resume-education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+
+.container .box-right .resume-education ul li::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid rgb(40, 48, 103);
+}
+
+.container .box-right .resume-education ul li::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(32, 32, 89);
+  top: 14px;
+  left: -21px;
+  width: 2px;
+  height: 70px;
+  
+}
+
+.container .icon i,
+.container .box-right .resume-hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .box-right .resume-hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .box-right .resume-hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  color: black;
+}
+
+.container .box-right .resume-hobby ul li i {
+  font-size: 30px;
+}
+
+.container .box-right .resume-hobby ul li::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -100px;
+  width: 100px;
+  background-color: black;
+  height: 2px;
+}
+
+.container .resume-hobby ul li:last-child::before {
+  display: none;
+}
